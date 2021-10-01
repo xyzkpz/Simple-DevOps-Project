@@ -33,7 +33,7 @@ Maven is a code build tool which used to convert your code to an artifact. this 
 So far we have completed the installation of maven software to support maven plugin on the jenkins console. Let's jump onto Jenkins to complete the remaining steps. 
 
 
-#INTSALL MAVEN ON AWS COMMANDS
+# INTSALL MAVEN ON AWS COMMANDS
 
 https://gist.github.com/sebsto/19b99f1fa1f32cae5d00
 
