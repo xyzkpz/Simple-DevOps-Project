@@ -34,6 +34,7 @@ So far we have completed the installation of maven software to support maven plu
 
 
 #INTSALL MAVEN ON AWS COMMANDS
+
 https://gist.github.com/sebsto/19b99f1fa1f32cae5d00
 
 ### Setup maven on Jenkins console
