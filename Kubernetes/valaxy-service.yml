@@ -1,14 +1,22 @@
+# below is the api version
 apiVersion: v1
 kind: Service
+## assign service name 
 metadata:
   name: valaxy-service
+  # app must use the same name as deployment 
   labels:
     app: valaxy-devops-project
 spec:
+  # it select this container
   selector:
     app: valaxy-devops-project
+  # specify the type of service
   type: LoadBalancer
   ports:
+      ## pod application is running on port 8080 on container 
     - port: 8080
+      ## on k8 cluster level exposing port 8080 
       targetPort: 8080
+      ## this is outside port we want to access on internet | same we need to open port on firewall to access application on internet
       nodePort: 31200
