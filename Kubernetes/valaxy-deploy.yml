@@ -1,18 +1,23 @@
+## kubernetes depoymet file 
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+# in kind we need to specify what type of service we are creating like : Deployment, pod, replication controller, services.. etc
 kind: Deployment
+## give deployment name to this file 
 metadata:
   name: valaxy-deployment
 spec:
   selector:
+  ## using this lable app get created 
     matchLabels:
       app: valaxy-devops-project
+  ## how many number of replication container pod we need we can specify the count 
   replicas: 2 # tells deployment to run 2 pods matching the template
   strategy:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
-
+## template is not but pod and how we can run image in container.
   template:
     metadata:
       labels:
