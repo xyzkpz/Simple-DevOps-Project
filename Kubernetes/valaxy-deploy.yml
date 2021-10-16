@@ -12,6 +12,7 @@ spec:
       app: valaxy-devops-project
   ## how many number of replication container pod we need we can specify the count 
   replicas: 2 # tells deployment to run 2 pods matching the template
+  ## added strategy 
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -26,6 +27,7 @@ spec:
       containers:
       - name: valaxy-devops-project
         image: yankils/simple-devops-image
+        ## whenever create new pod make sure it pull the latest image from github repository
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
